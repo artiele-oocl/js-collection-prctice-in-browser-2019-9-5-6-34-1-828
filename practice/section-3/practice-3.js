@@ -8,7 +8,7 @@ function createUpdatedCollection(collectionA, objectB) {
 }
 
 function isInObject(objectB,val){
-  return objectB.value.indexOf(val) > -1
+  return objectB.value.indexOf(val) > -1;
 }
 function getQuotient(num){
   const quotient = Math.floor(num/3);
