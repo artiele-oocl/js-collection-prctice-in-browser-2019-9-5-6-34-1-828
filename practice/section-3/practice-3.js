@@ -1,8 +1,7 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  const rawObject = getTotalCountOfEachKey(collectionA)
-  return rawObject.map((value)=>{
+  return getTotalCountOfEachKey(collectionA).map((value)=>{
     return (isInObject(objectB,value.key)) ? ({"key":value.key, "count":value.count-getQuotient(value.count)}) : ({"key":value.key, "count":value.count})
   })
 }
