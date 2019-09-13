@@ -1,5 +1,11 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-  return 'Implement the practice require, and begin changing code in this row';
+  return collectionA.map((value)=>{
+    return (isInObject(objectB,value.key)) ? ({"key":value.key, "count":value.count-1}) : ({"key":value.key, "count":value.count})
+  })
+}
+
+function isInObject(object,val){
+  return object.value.indexOf(val) > -1
 }
